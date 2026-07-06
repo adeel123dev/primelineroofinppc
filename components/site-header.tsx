@@ -26,11 +26,11 @@ export function SiteHeader() {
           {/* Logo */}
           <a href="#top" className="flex items-center gap-2.5" onClick={closeMenu}>
             <Image
-              src="/primeline-mark.png"
+              src="/primeline-logo.webp"
               alt="Primeline Roofing logo"
               width={96}
               height={96}
-              className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"
+              className="h-10 w-10 shrink-0 rounded-lg object-contain sm:h-11 sm:w-11"
               priority
             />
             <div className="leading-tight">
