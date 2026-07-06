@@ -37,49 +37,37 @@ export function ServicesSection() {
           </p>
         </div>
 
-        {/* Services grid with skew effect */}
+        {/* Services grid — clean flat cards with 1px borders */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, idx) => (
+          {services.map((service) => (
             <div
               key={service.title}
-              className="group relative"
-              style={{
-                perspective: '1000px',
-              }}
+              className="group flex flex-col items-center justify-between rounded-lg border border-border bg-background px-6 py-8 text-center transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
             >
-              {/* Curved skew card using transform */}
-              <div
-                className="flex flex-col items-center justify-between rounded-2xl bg-secondary/40 px-6 py-8 text-center transition-all duration-300 hover:bg-secondary/60"
-                style={{
-                  transform: `skewY(-3deg) rotateX(${idx % 2 === 0 ? '-2' : '2'}deg)`,
-                  transformStyle: 'preserve-3d',
-                }}
+              {/* Icon */}
+              <service.icon
+                className="mb-4 h-12 w-12 text-foreground"
+                strokeWidth={1.5}
+                aria-hidden="true"
+              />
+
+              {/* Title */}
+              <h3 className="font-heading text-base font-bold text-foreground">
+                {service.title}
+              </h3>
+
+              {/* Description */}
+              <p className="mt-3 text-sm text-muted-foreground">
+                {service.description}
+              </p>
+
+              {/* Orange arrow button */}
+              <button
+                className="mt-5 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground transition-transform hover:scale-110 active:scale-95"
+                aria-label={`Learn more about ${service.title}`}
               >
-                {/* Icon */}
-                <service.icon
-                  className="mb-4 h-12 w-12 text-foreground"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
-                />
-
-                {/* Title */}
-                <h3 className="font-heading text-base font-bold text-foreground">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mt-3 text-sm text-muted-foreground">
-                  {service.description}
-                </p>
-
-                {/* Orange arrow button */}
-                <button
-                  className="mt-5 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground transition-transform hover:scale-110 active:scale-95 group-hover:-translate-y-1"
-                  aria-label={`Learn more about ${service.title}`}
-                >
-                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
-                </button>
-              </div>
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              </button>
             </div>
           ))}
         </div>
