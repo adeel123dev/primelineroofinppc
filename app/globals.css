@@ -252,6 +252,53 @@
   animation: btn-pulse 2s ease-in-out infinite;
 }
 
+/* ── Google-colour spinning border on the floating review pill ── */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes google-spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Outer wrapper: 2 px padding gives room for the animated border */
+.google-pill-wrapper {
+  padding: 2px;
+  border-radius: 9999px;
+  background: conic-gradient(
+    from var(--angle),
+    #EA4335 0%,
+    #FBBC05 25%,
+    #34A853 50%,
+    #4285F4 75%,
+    #EA4335 100%
+  );
+  animation: google-spin 3s linear infinite;
+  box-shadow: 0 4px 24px -4px rgba(0,0,0,0.22);
+}
+
+/* Inner pill sits on top of the gradient border */
+.google-pill-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.875rem 0.45rem 0.625rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.google-pill-inner:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cta-card,
   .cta-card::before,
@@ -259,5 +306,9 @@
   .form-glow,
   .btn-pulse {
     animation: none;
+  }
+  .google-pill-wrapper {
+    animation: none;
+    background: #4285F4;
   }
 }
