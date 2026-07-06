@@ -94,7 +94,7 @@ export default function Page() {
               5.0 Rated · Illewong Metal Roofing Specialists
             </div>
             <h1 className="mt-4 font-heading text-[2rem] font-extrabold leading-[1.08] text-balance text-white sm:text-5xl">
-              Premium Colorbond® Roofing{' '}
+              Premium Colorbond Roofing{' '}
               <span className="text-accent">Done Right</span>, First Time
             </h1>
             <p className="mt-3 max-w-xl text-base text-pretty text-white/80 sm:text-lg">

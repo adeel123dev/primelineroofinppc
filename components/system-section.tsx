@@ -5,7 +5,7 @@ const pillars = [
   {
     icon: Award,
     title: 'Quality Craftsmanship',
-    body: 'Decades of metal roofing mastery using genuine Colorbond® and Zincalume® steel made by BlueScope, including coastal-grade and cyclone-rated profiles built to last 50+ years.',
+    body: 'Decades of metal roofing mastery using genuine Colorbond and Zincalume steel made by BlueScope, including coastal-grade and cyclone-rated profiles built to last 50+ years.',
   },
   {
     icon: Wrench,
@@ -42,7 +42,7 @@ export function SystemSection() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-gold">Why Choose Us</p>
             <h2 className="mt-2 font-heading text-2xl font-extrabold text-balance sm:text-3xl">
-              A Complete Colorbond® Roofing System: Supplied, Installed &amp; Guaranteed By One Team
+              A Complete Colorbond Roofing System: Supplied, Installed &amp; Guaranteed By One Team
             </h2>
             <p className="mt-3 text-pretty text-primary-foreground/80">
               We&apos;ve protected over 3,500 roofs across the Illawarra and South Coast with 25+

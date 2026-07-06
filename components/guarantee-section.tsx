@@ -9,7 +9,7 @@ const guaranteePoints = [
   {
     icon: Shield,
     title: 'Material Warranties Up to 50 Years',
-    body: 'BlueScope Colorbond® and Zincalume® materials carry their own lifetime warranties, plus our extended options.',
+    body: 'BlueScope Colorbond and Zincalume materials carry their own lifetime warranties, plus our extended options.',
   },
   {
     icon: AlertCircle,

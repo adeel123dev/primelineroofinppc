@@ -13,7 +13,7 @@ const benefits = [
   'Warranty-backed workmanship on all installs and repairs',
   'Free inspections and transparent quotes across Illewong',
   'Licensed & fully insured with NSW Fair Trading credentials',
-  'Genuine Colorbond® steel made by BlueScope in Australia',
+  'Genuine Colorbond steel made by BlueScope in Australia',
   'Same-day emergency response across the Illawarra',
   'Upfront, fixed pricing with no estimates that grow',
 ]

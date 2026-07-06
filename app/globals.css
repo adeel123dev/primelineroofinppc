@@ -216,25 +216,25 @@
   transform-origin: 50% 60%;
 }
 
-/* Subtle glow around the lead form */
+/* Visible glow around the lead form */
 @keyframes form-glow {
   0%,
   100% {
     box-shadow:
-      0 16px 40px -10px rgb(0 0 0 / 0.18),
-      0 0 0 1px color-mix(in oklch, var(--accent) 12%, transparent),
-      0 0 14px 0 color-mix(in oklch, var(--accent) 10%, transparent);
+      0 20px 50px -10px rgb(0 0 0 / 0.22),
+      0 0 0 1px color-mix(in oklch, var(--accent) 35%, transparent),
+      0 0 28px 4px color-mix(in oklch, var(--accent) 28%, transparent);
   }
   50% {
     box-shadow:
-      0 16px 40px -10px rgb(0 0 0 / 0.18),
-      0 0 0 1px color-mix(in oklch, var(--accent) 28%, transparent),
-      0 0 24px 4px color-mix(in oklch, var(--accent) 16%, transparent);
+      0 20px 50px -10px rgb(0 0 0 / 0.22),
+      0 0 0 1px color-mix(in oklch, var(--accent) 55%, transparent),
+      0 0 42px 8px color-mix(in oklch, var(--accent) 40%, transparent);
   }
 }
 
 .form-glow {
-  animation: form-glow 4s ease-in-out infinite;
+  animation: form-glow 3.5s ease-in-out infinite;
 }
 
 /* Continuous pulse for primary CTA buttons */

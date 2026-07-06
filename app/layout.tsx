@@ -18,7 +18,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Metal Roofing Illewong | ★5.0 Rated | Free Quote 24hrs | Primeline Roofing',
   description:
-    'Metal roofing Illewong. 5.0★ Google rated Colorbond® specialists. Licensed & insured, 25-yr written warranty. Free quote in 24hrs. Call (02) 4217 7737.',
+    'Metal roofing Illewong. 5.0★ Google rated Colorbond specialists. Licensed & insured, 25-yr written warranty. Free quote in 24hrs. Call (02) 4217 7737.',
   generator: 'v0.app',
 }
 

@@ -160,7 +160,7 @@ export function LeadForm({
           <GoogleLogo className="h-3.5 w-3.5" /> Google 5.0
         </span>
         <span className="text-border">•</span>
-        <span>Colorbond®</span>
+        <span>Colorbond</span>
         <span className="text-border">•</span>
         <span>HiPages Verified</span>
         <span className="text-border">•</span>

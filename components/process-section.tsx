@@ -14,12 +14,12 @@ const steps = [
   {
     icon: Hammer,
     title: 'Expert Installation',
-    body: 'Our certified team handles the work with precision, using premium Colorbond® and Zincalume® materials built for Australian coastal conditions, safely and efficiently.',
+    body: 'Our certified team handles the work with precision, using premium Colorbond and Zincalume materials built for Australian coastal conditions, safely and efficiently.',
   },
   {
     icon: ClipboardCheck,
     title: 'Quality Inspection',
-    body: 'Colorbond® sheets are custom cut to your roof and installed to manufacturer specification by Primeline’s own trained installers. Premium materials, guaranteed.',
+    body: 'Colorbond sheets are custom cut to your roof and installed to manufacturer specification by Primeline\'s own trained installers. Premium materials, guaranteed.',
   },
   {
     icon: ShieldCheck,
