@@ -37,9 +37,10 @@ export function ComparisonSection() {
         </div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:items-start">
-          {/* Comparison table */}
-          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-            <div className="grid grid-cols-[1.4fr_1fr_1fr] bg-primary text-xs font-bold text-primary-foreground sm:text-sm">
+          {/* Comparison table — stacks on mobile, grid on desktop */}
+          <div className="space-y-3 sm:overflow-hidden sm:rounded-2xl sm:border sm:border-border sm:bg-card sm:shadow-sm sm:space-y-0">
+            {/* Header — hidden on mobile, shown on sm+ */}
+            <div className="hidden sm:grid sm:grid-cols-[1.4fr_1fr_1fr] bg-primary text-xs font-bold text-primary-foreground">
               <div className="px-4 py-3.5" />
               <div className="border-l border-primary-foreground/15 px-3 py-3.5 text-center">
                 Primeline
@@ -48,21 +49,34 @@ export function ComparisonSection() {
                 Typical Roofer
               </div>
             </div>
+
+            {/* Rows */}
             {rows.map((row, i) => (
               <div
                 key={row.label}
-                className={`grid grid-cols-[1.4fr_1fr_1fr] text-sm ${
-                  i % 2 === 1 ? 'bg-secondary/40' : ''
-                }`}
+                className="sm:grid sm:grid-cols-[1.4fr_1fr_1fr] sm:text-sm rounded-lg border border-border bg-card p-4 sm:rounded-none sm:border-none sm:bg-transparent sm:p-0 sm:border-b sm:border-b-border sm:even:bg-secondary/40"
               >
-                <div className="px-4 py-3.5 font-medium text-foreground">{row.label}</div>
-                <div className="flex items-center gap-1.5 border-l border-border px-3 py-3.5 text-foreground">
-                  <Check className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                  <span className="text-pretty">{row.us}</span>
+                {/* Label — full width on mobile, left column on desktop */}
+                <div className="mb-3 font-bold text-foreground sm:mb-0 sm:font-medium sm:px-4 sm:py-3.5">
+                  {row.label}
                 </div>
-                <div className="flex items-center gap-1.5 border-l border-border px-3 py-3.5 text-muted-foreground">
-                  <X className="h-4 w-4 shrink-0 text-destructive/70" aria-hidden="true" />
-                  <span className="text-pretty">{row.them}</span>
+
+                {/* Us column */}
+                <div className="mb-2 flex items-start gap-2 text-sm text-foreground sm:mb-0 sm:flex-col sm:items-center sm:border-l sm:border-border sm:px-3 sm:py-3.5">
+                  <span className="font-medium sm:hidden">Primeline:</span>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                    <span className="text-pretty">{row.us}</span>
+                  </div>
+                </div>
+
+                {/* Them column */}
+                <div className="flex items-start gap-2 text-sm text-muted-foreground sm:flex-col sm:items-center sm:border-l sm:border-border sm:px-3 sm:py-3.5">
+                  <span className="font-medium text-foreground sm:hidden">Typical Roofer:</span>
+                  <div className="flex items-center gap-1.5">
+                    <X className="h-4 w-4 shrink-0 text-destructive/70" aria-hidden="true" />
+                    <span className="text-pretty">{row.them}</span>
+                  </div>
                 </div>
               </div>
             ))}
