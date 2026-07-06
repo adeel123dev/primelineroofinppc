@@ -102,17 +102,17 @@ export default function Page() {
               backed by a written 25-year workmanship warranty.
             </p>
 
-            {/* Hero CTA pill */}
-            <div className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-full bg-white/10 p-1.5 backdrop-blur">
+            {/* Hero CTA pill — stacks full-width on mobile, inline pill on larger screens */}
+            <div className="mt-6 flex w-full flex-col gap-2 rounded-3xl bg-white/10 p-1.5 backdrop-blur sm:inline-flex sm:w-auto sm:flex-row sm:items-center sm:rounded-full">
               <a
                 href="#quote-form"
-                className="btn-pulse inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-extrabold text-accent-foreground transition-transform hover:scale-[1.03]"
+                className="btn-pulse inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-extrabold text-accent-foreground transition-transform hover:scale-[1.03] sm:w-auto"
               >
                 Get A Free Quote
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white/20 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-white/30 backdrop-blur"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/20 px-5 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/30 sm:w-auto"
               >
                 View Services
               </a>

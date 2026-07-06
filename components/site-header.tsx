@@ -28,9 +28,9 @@ export function SiteHeader() {
             <Image
               src="/primeline-logo.webp"
               alt="Primeline Roofing logo"
-              width={40}
-              height={40}
-              className="h-9 w-9 rounded-md object-contain"
+              width={96}
+              height={96}
+              className="h-10 w-10 shrink-0 rounded-lg object-contain sm:h-11 sm:w-11"
               priority
             />
             <div className="leading-tight">

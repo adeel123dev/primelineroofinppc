@@ -77,36 +77,45 @@ export function GallerySection() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, i) => (
-              <button
-                key={project.src}
-                type="button"
-                onClick={() => setLightbox(i)}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                aria-label={`View larger: ${project.label}`}
-              >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                    src={project.src}
-                    alt={project.alt}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
-                </div>
-                <div className="flex items-center justify-between gap-2 px-4 py-3">
-                  <p className="text-sm font-semibold text-foreground">{project.label}</p>
-                  <span
-                    className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${tagColors[project.tag] ?? 'bg-secondary text-secondary-foreground'}`}
-                  >
-                    {project.tag}
-                  </span>
-                </div>
-              </button>
-            ))}
+          {/* Auto-scrolling marquee — pauses on hover, click any card to open the lightbox */}
+          <div className="marquee-viewport relative mt-10 overflow-hidden">
+            {/* edge fades */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-background to-transparent sm:w-16" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-background to-transparent sm:w-16" />
+
+            <div className="marquee-track gap-4">
+              {[...projects, ...projects].map((project, i) => (
+                <button
+                  key={`${project.src}-${i}`}
+                  type="button"
+                  onClick={() => setLightbox(i % projects.length)}
+                  aria-hidden={i >= projects.length}
+                  tabIndex={i >= projects.length ? -1 : 0}
+                  className="group relative w-[260px] shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-[320px]"
+                  aria-label={`View larger: ${project.label}`}
+                >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                    <Image
+                      src={project.src}
+                      alt={project.alt}
+                      fill
+                      sizes="320px"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {/* Overlay on hover */}
+                    <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
+                  </div>
+                  <div className="flex items-center justify-between gap-2 px-4 py-3">
+                    <p className="text-sm font-semibold text-foreground">{project.label}</p>
+                    <span
+                      className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${tagColors[project.tag] ?? 'bg-secondary text-secondary-foreground'}`}
+                    >
+                      {project.tag}
+                    </span>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="mt-8 text-center">

@@ -299,6 +299,26 @@
   background: rgba(255, 255, 255, 1);
 }
 
+/* ── Auto-moving gallery marquee ── */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-x 45s linear infinite;
+}
+
+.marquee-viewport:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cta-card,
   .cta-card::before,
@@ -310,5 +330,8 @@
   .google-pill-wrapper {
     animation: none;
     background: #4285F4;
+  }
+  .marquee-track {
+    animation: none;
   }
 }
