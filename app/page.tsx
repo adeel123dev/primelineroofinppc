@@ -89,11 +89,7 @@ export default function Page() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-14">
           {/* LEFT */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/60 bg-accent/20 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-accent">
-              <Star className="h-3.5 w-3.5 fill-accent" aria-hidden="true" />
-              5.0 Rated · Illewong Metal Roofing Specialists
-            </div>
-            <h1 className="mt-4 font-heading text-[2rem] font-extrabold leading-[1.08] text-balance text-white sm:text-5xl">
+            <h1 className="font-heading text-[2rem] font-extrabold leading-[1.08] text-balance text-white sm:text-5xl">
               Premium Colorbond Roofing{' '}
               <span className="text-accent">Done Right</span>, First Time
             </h1>
@@ -153,6 +149,12 @@ export default function Page() {
                 </figcaption>
               </div>
             </figure>
+
+            {/* Rated badge — moved to bottom, compact on mobile */}
+            <div className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-accent/60 bg-accent/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-accent sm:gap-2 sm:px-3 sm:py-1.5 sm:text-xs">
+              <Star className="h-3 w-3 shrink-0 fill-accent sm:h-3.5 sm:w-3.5" aria-hidden="true" />
+              5.0 Rated · Illewong Metal Roofing Specialists
+            </div>
           </div>
 
           {/* RIGHT: form */}
