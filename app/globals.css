@@ -236,18 +236,7 @@
 }
 
 .form-glow {
-animation: form-glow 2.8s ease-in-out infinite;
-}
-  50% {
-    box-shadow:
-      0 20px 50px -10px rgb(0 0 0 / 0.22),
-      0 0 0 1px color-mix(in oklch, var(--accent) 55%, transparent),
-      0 0 42px 8px color-mix(in oklch, var(--accent) 40%, transparent);
-  }
-}
-
-.form-glow {
-  animation: form-glow 3.5s ease-in-out infinite;
+  animation: form-glow 2.8s ease-in-out infinite;
 }
 
 /* Continuous pulse for primary CTA buttons */
