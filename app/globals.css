@@ -220,11 +220,24 @@
 @keyframes form-glow {
   0%,
   100% {
-    box-shadow:
-      0 20px 50px -10px rgb(0 0 0 / 0.22),
-      0 0 0 1px color-mix(in oklch, var(--accent) 35%, transparent),
-      0 0 28px 4px color-mix(in oklch, var(--accent) 28%, transparent);
+  box-shadow:
+    0 20px 50px -10px rgb(0 0 0 / 0.22),
+    0 0 0 2px color-mix(in oklch, var(--accent) 45%, transparent),
+    0 0 32px 6px color-mix(in oklch, var(--accent) 35%, transparent),
+    inset 0 0 0 1px color-mix(in oklch, var(--accent) 20%, transparent);
   }
+  50% {
+  box-shadow:
+    0 20px 50px -10px rgb(0 0 0 / 0.22),
+    0 0 0 2px color-mix(in oklch, var(--accent) 60%, transparent),
+    0 0 48px 12px color-mix(in oklch, var(--accent) 50%, transparent),
+    inset 0 0 0 1px color-mix(in oklch, var(--accent) 30%, transparent);
+  }
+}
+
+.form-glow {
+animation: form-glow 2.8s ease-in-out infinite;
+}
   50% {
     box-shadow:
       0 20px 50px -10px rgb(0 0 0 / 0.22),
