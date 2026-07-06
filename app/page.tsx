@@ -152,67 +152,6 @@ export default function Page() {
               </div>
             </figure>
           </div>
-            <h1 className="mt-4 font-heading text-[2rem] font-extrabold leading-[1.08] text-balance text-foreground sm:text-5xl">
-              Premium Colorbond® Roofing{' '}
-              <span className="text-accent">Done Right</span>, First Time
-            </h1>
-            <p className="mt-3 max-w-xl text-base text-pretty text-muted-foreground sm:text-lg">
-              Licensed, insured local roofers for re-roofs, restorations, cladding and leak repairs,
-              backed by a written 25-year workmanship warranty.
-            </p>
-
-            {/* Hero CTA pill */}
-            <div className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-full bg-primary p-1.5">
-              <a
-                href="#quote-form"
-                className="btn-pulse inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-extrabold text-accent-foreground transition-transform hover:scale-[1.03]"
-              >
-                Get A Free Quote
-              </a>
-              <a
-                href="#services"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-card px-5 py-3 text-sm font-bold text-foreground transition-colors hover:bg-muted"
-              >
-                View Services
-              </a>
-            </div>
-
-            {/* Trust strip, visible without scrolling */}
-            <ul className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-              {usps.map((usp) => (
-                <li
-                  key={usp.title}
-                  className="flex items-center gap-2.5 rounded-xl border border-border bg-card/80 px-3 py-2.5 backdrop-blur sm:flex-col sm:items-start sm:gap-1"
-                >
-                  <usp.icon className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-                  <div>
-                    <p className="font-heading text-sm font-bold leading-tight text-foreground">
-                      {usp.title}
-                    </p>
-                    <p className="hidden text-xs leading-snug text-muted-foreground sm:block">
-                      {usp.body}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            {/* Google review proof */}
-            <figure className="mt-5 flex items-start gap-3 rounded-xl border border-border bg-card/80 p-4 backdrop-blur">
-              <GoogleLogo className="mt-0.5 h-6 w-6 shrink-0" />
-              <div>
-                <Stars className="h-4 w-4" />
-                <blockquote className="mt-1.5 text-sm leading-relaxed text-pretty text-foreground">
-                  “Would most definitely recommend Sam and his company. The problem was identified
-                  straight away and sorted fast.”
-                </blockquote>
-                <figcaption className="mt-1 text-xs text-muted-foreground">
-                  <span className="font-semibold text-foreground">Cathryn O.</span> · Verified Google
-                  Review · <span className="font-semibold text-accent">21 five-star reviews</span>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
 
           {/* RIGHT: form */}
           <div className="lg:sticky lg:top-6">
