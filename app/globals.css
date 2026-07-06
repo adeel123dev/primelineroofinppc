@@ -149,10 +149,10 @@
 @keyframes cta-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 color-mix(in oklch, var(--accent) 45%, transparent);
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--accent) 20%, transparent);
   }
   50% {
-    box-shadow: 0 0 28px 6px color-mix(in oklch, var(--accent) 35%, transparent);
+    box-shadow: 0 0 16px 3px color-mix(in oklch, var(--accent) 14%, transparent);
   }
 }
 
@@ -216,25 +216,25 @@
   transform-origin: 50% 60%;
 }
 
-/* Continuous glow around the lead form */
+/* Subtle glow around the lead form */
 @keyframes form-glow {
   0%,
   100% {
     box-shadow:
-      0 20px 45px -10px rgb(0 0 0 / 0.5),
-      0 0 0 1px color-mix(in oklch, var(--accent) 25%, transparent),
-      0 0 22px 0 color-mix(in oklch, var(--accent) 22%, transparent);
+      0 16px 40px -10px rgb(0 0 0 / 0.18),
+      0 0 0 1px color-mix(in oklch, var(--accent) 12%, transparent),
+      0 0 14px 0 color-mix(in oklch, var(--accent) 10%, transparent);
   }
   50% {
     box-shadow:
-      0 20px 45px -10px rgb(0 0 0 / 0.5),
-      0 0 0 1px color-mix(in oklch, var(--accent) 55%, transparent),
-      0 0 42px 8px color-mix(in oklch, var(--accent) 38%, transparent);
+      0 16px 40px -10px rgb(0 0 0 / 0.18),
+      0 0 0 1px color-mix(in oklch, var(--accent) 28%, transparent),
+      0 0 24px 4px color-mix(in oklch, var(--accent) 16%, transparent);
   }
 }
 
 .form-glow {
-  animation: form-glow 3s ease-in-out infinite;
+  animation: form-glow 4s ease-in-out infinite;
 }
 
 /* Continuous pulse for primary CTA buttons */

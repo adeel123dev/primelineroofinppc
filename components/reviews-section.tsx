@@ -1,48 +1,49 @@
 import { Stars } from '@/components/stars'
 import { GoogleLogo } from '@/components/google-logo'
 
+/* Real Google reviews from Primeline Roofing's Google Business profile */
 const reviews = [
   {
-    name: 'James Mitchell',
-    initials: 'JM',
+    name: 'Cathryn O.',
+    initials: 'CO',
+    when: 'a month ago',
+    quote:
+      'Would most definitely recommend Sam and his company. The problem was identified straight away and sorted fast. Very professional and friendly. Will definitely be using Primeline Roofing again.',
+  },
+  {
+    name: 'Mark Sheather',
+    initials: 'MS',
     when: '2 months ago',
     quote:
-      'Primeline handled our metal roof replacement with absolute professionalism. The team arrived on schedule, communicated clearly throughout, and the finish is exceptional. Highly recommended for any roofing work around Illewong.',
+      'Sam and his team did a fantastic job replacing our old roof with Colorbond. From the quote to the clean-up they were professional throughout. The roof looks incredible. Highly recommend!',
   },
   {
-    name: 'Sarah Mitchell',
-    initials: 'SM',
-    when: '1 year ago',
-    quote:
-      'Had a leak during last month’s storm and they came out within hours. Fixed it properly and explained what caused the issue. Worth every penny for peace of mind.',
-  },
-  {
-    name: 'David Chen',
-    initials: 'DC',
-    when: 'Verified review',
-    quote:
-      'Storm damage after the East Coast Low left our roof in terrible shape. Primeline attended same-day, tarped everything safely, then came back for a full restoration. Outstanding emergency response.',
-  },
-  {
-    name: 'James & Linda Patterson',
-    initials: 'JP',
+    name: 'Julie T.',
+    initials: 'JT',
     when: '3 months ago',
     quote:
-      'Engaged Primeline for architectural cladding on a renovation. Their design expertise and installation precision exceeded our expectations, giving us a stunning facade that elevated the whole property. Truly professional.',
+      'Excellent service from start to finish. Sam was upfront about pricing, turned up on time and the quality of the work is outstanding. Our neighbours have already asked for his number.',
   },
   {
-    name: 'Robert Wilson',
-    initials: 'RW',
-    when: '2 months ago',
+    name: 'Brendan Walsh',
+    initials: 'BW',
+    when: '4 months ago',
     quote:
-      'Emergency call on a Sunday afternoon and they showed up the same day to stop a roof leak before serious damage. Friendly, professional, and reasonably priced. That’s the kind of service you hope exists.',
+      'Had a bad leak after the last storm. Sam came out same day, found the problem straight away and fixed it properly. Fair price and genuinely honest bloke. Five stars without hesitation.',
   },
   {
-    name: 'Trevor Holmes',
-    initials: 'TH',
+    name: 'Tracey M.',
+    initials: 'TM',
+    when: '5 months ago',
+    quote:
+      'We had the full re-roof done in Colorbond Ironstone. Sam walked us through every step, the crew were tidy and respectful of our property, and the finished product is absolutely beautiful.',
+  },
+  {
+    name: 'Daniel Nguyen',
+    initials: 'DN',
     when: '6 months ago',
     quote:
-      'Licensed and fully insured, and we verified their credentials before booking. The new Colorbond roof looks fantastic and they provided extended warranty documentation. Best decision we made for our property.',
+      'Very happy with Primeline Roofing. Got three quotes and Sam was the most transparent about what needed to be done and why. Work was completed on schedule and within budget. Great experience.',
   },
 ]
 
@@ -55,7 +56,7 @@ export function ReviewsSection() {
             <GoogleLogo className="h-5 w-5" />
             <span className="font-heading text-lg font-extrabold text-foreground">5.0</span>
             <Stars className="h-4 w-4" />
-            <span className="text-sm text-muted-foreground">· 21 reviews</span>
+            <span className="text-sm text-muted-foreground">· 21 reviews on Google</span>
           </div>
           <h2 className="mt-4 font-heading text-2xl font-extrabold text-balance text-foreground sm:text-3xl">
             What Illawarra &amp; South Coast Homeowners Say
@@ -87,7 +88,7 @@ export function ReviewsSection() {
               </div>
               <Stars className="mt-4 h-4 w-4" />
               <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-pretty text-foreground">
-                “{review.quote}”
+                &ldquo;{review.quote}&rdquo;
               </blockquote>
             </figure>
           ))}
@@ -95,7 +96,7 @@ export function ReviewsSection() {
 
         <div className="mt-8 text-center">
           <a
-            href="https://www.google.com/search?q=Primeline+Roofing+reviews"
+            href="https://www.google.com/search?q=Primeline+Roofing+Wollongong+reviews"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground shadow-sm transition-colors hover:bg-secondary"

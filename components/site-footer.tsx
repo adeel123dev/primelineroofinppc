@@ -142,53 +142,64 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Payment methods */}
-        <div className="mt-10 rounded-2xl border border-border bg-secondary/50 px-6 py-5">
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-            <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+        {/* Payment methods — single row */}
+        <div className="mt-10 rounded-2xl border border-border bg-secondary/50 px-5 py-4">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <div className="flex items-center gap-1.5 text-sm font-semibold text-foreground shrink-0">
               <ShieldCheck className="h-4 w-4 text-accent" aria-hidden="true" />
               Payment Methods Accepted
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-2.5 sm:justify-end">
+            <div className="flex flex-wrap items-center gap-2">
               {/* Visa */}
-              <div className="flex h-9 w-14 items-center justify-center rounded-lg border border-border bg-card px-2 shadow-sm">
-                <svg viewBox="0 0 48 16" fill="none" className="w-full" aria-label="Visa">
-                  <text x="2" y="13" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="13" fill="#1A1F71">VISA</text>
+              <div className="flex h-9 w-[54px] items-center justify-center rounded-lg border border-border bg-white px-2 shadow-sm" aria-label="Visa">
+                <svg viewBox="0 0 750 471" xmlns="http://www.w3.org/2000/svg" className="h-4 w-auto">
+                  <rect width="750" height="471" rx="40" fill="white"/>
+                  <path d="M278.2 334.5 316.3 136.6H376.2L338.1 334.5H278.2Z" fill="#1A1F71"/>
+                  <path d="M524.3 141.3C512.1 136.5 492.5 131.3 468.3 131.3 409.8 131.3 368.3 161.4 368 204.2 367.7 236.1 397.2 253.8 419.5 264.3 442.4 275.1 450.2 282.1 450.1 291.8 449.9 306.6 431.6 313.4 414.5 313.4 390.7 313.4 378 310 357.4 301.3L349.7 297.8 341.4 344.9C355.6 351.2 381.9 356.7 409.2 357 471.3 357 512 327.3 512.5 281.7 512.7 256.7 496.5 237.5 461.6 221.4 441 211.1 428.8 204.3 428.9 193.9 428.9 184.7 439.1 174.9 461.2 174.9 479.8 174.6 493.3 178.8 503.9 183.1L509.1 185.5 524.3 141.3Z" fill="#1A1F71"/>
+                  <path d="M657.8 136.6H611.3C597.1 136.6 586.3 140.7 580 155.2L493.6 334.5H555.6C555.6 334.5 565.9 306.6 568.2 300.5 575 300.5 635.2 300.6 643.8 300.6 645.6 308.4 651.2 334.5 651.2 334.5H706L657.8 136.6ZM584.9 256.1C589.5 244.2 607.8 196.5 607.8 196.5 607.5 197 612.3 184.3 615 176.8L618.6 194.8C618.6 194.8 629.8 248.5 632.1 256.1H584.9Z" fill="#1A1F71"/>
+                  <path d="M232.8 136.6L175.5 273.8 169.3 243.3C158.4 208.3 125.6 170.2 88.9 151.1L141.4 334.3 203.9 334.2 295.4 136.6H232.8Z" fill="#1A1F71"/>
+                  <path d="M120.9 136.6H26.6L25.9 140.9C100 158.9 150.4 201 169.3 243.3L150.1 155.5C146.8 141.3 136.2 137.1 120.9 136.6Z" fill="#F9A533"/>
                 </svg>
               </div>
+
               {/* Mastercard */}
-              <div className="flex h-9 w-14 items-center justify-center rounded-lg border border-border bg-card px-1.5 shadow-sm" aria-label="Mastercard">
-                <svg viewBox="0 0 38 24" fill="none" className="w-full">
-                  <circle cx="14" cy="12" r="10" fill="#EB001B" />
-                  <circle cx="24" cy="12" r="10" fill="#F79E1B" />
-                  <path d="M19 6.8a10 10 0 0 1 0 10.4A10 10 0 0 1 19 6.8z" fill="#FF5F00" />
+              <div className="flex h-9 w-[54px] items-center justify-center rounded-lg border border-border bg-white px-1.5 shadow-sm" aria-label="Mastercard">
+                <svg viewBox="0 0 152 95" xmlns="http://www.w3.org/2000/svg" className="h-5 w-auto">
+                  <circle cx="55" cy="47.5" r="47.5" fill="#EB001B"/>
+                  <circle cx="97" cy="47.5" r="47.5" fill="#F79E1B"/>
+                  <path d="M76 13.7C85.5 21.1 91.7 32.5 91.7 47.5 91.7 62.5 85.5 73.9 76 81.3 66.5 73.9 60.3 62.5 60.3 47.5 60.3 32.5 66.5 21.1 76 13.7Z" fill="#FF5F00"/>
                 </svg>
               </div>
+
               {/* AMEX */}
-              <div className="flex h-9 w-14 items-center justify-center rounded-lg border border-border bg-[#016FD0] px-1.5 shadow-sm">
-                <svg viewBox="0 0 48 16" fill="none" className="w-full" aria-label="American Express">
-                  <text x="1" y="12" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="10" fill="white">AMEX</text>
+              <div className="flex h-9 w-[54px] items-center justify-center rounded-lg border border-transparent bg-[#016FD0] px-1.5 shadow-sm" aria-label="American Express">
+                <svg viewBox="0 0 48 18" className="h-4 w-auto">
+                  <text x="3" y="13" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="11" fill="white" letterSpacing="0.5">AMEX</text>
                 </svg>
               </div>
+
               {/* Afterpay */}
-              <div className="flex h-9 w-[72px] items-center justify-center rounded-lg border border-border bg-[#B2FCE4] px-2 shadow-sm">
-                <svg viewBox="0 0 70 20" fill="none" className="w-full" aria-label="Afterpay">
-                  <text x="2" y="14" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="10" fill="#000">Afterpay</text>
+              <div className="flex h-9 w-[76px] items-center justify-center rounded-lg border border-border bg-[#B2FCE4] px-2 shadow-sm" aria-label="Afterpay">
+                <svg viewBox="0 0 80 22" className="h-4 w-auto">
+                  <text x="2" y="15" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="11" fill="#000000">Afterpay</text>
                 </svg>
               </div>
-              {/* Zip Pay */}
-              <div className="flex h-9 w-[52px] items-center justify-center rounded-lg border border-border bg-[#AA8FFF] px-2 shadow-sm">
-                <svg viewBox="0 0 44 20" fill="none" className="w-full" aria-label="Zip">
-                  <text x="4" y="14" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="12" fill="white">zip</text>
+
+              {/* Zip */}
+              <div className="flex h-9 w-[50px] items-center justify-center rounded-lg border border-transparent bg-[#AA8FFF] px-2 shadow-sm" aria-label="Zip">
+                <svg viewBox="0 0 40 22" className="h-4 w-auto">
+                  <text x="4" y="16" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="14" fill="white">zip</text>
                 </svg>
               </div>
+
               {/* Bank Transfer */}
-              <div className="flex h-9 items-center justify-center rounded-lg border border-border bg-card px-3 shadow-sm">
-                <span className="text-[11px] font-semibold text-muted-foreground">Bank Transfer</span>
+              <div className="flex h-9 items-center justify-center rounded-lg border border-border bg-white px-3 shadow-sm">
+                <span className="text-[11px] font-semibold text-gray-600">Bank Transfer</span>
               </div>
+
               {/* Cash */}
-              <div className="flex h-9 items-center justify-center rounded-lg border border-border bg-card px-3 shadow-sm">
-                <span className="text-[11px] font-semibold text-muted-foreground">Cash</span>
+              <div className="flex h-9 items-center justify-center rounded-lg border border-border bg-white px-3 shadow-sm">
+                <span className="text-[11px] font-semibold text-gray-600">Cash</span>
               </div>
             </div>
           </div>

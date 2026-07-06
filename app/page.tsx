@@ -15,6 +15,7 @@ import { FinalCta } from '@/components/final-cta'
 import { SiteFooter } from '@/components/site-footer'
 import { StickyCta } from '@/components/sticky-cta'
 import { FloatingGoogleRating } from '@/components/floating-google-rating'
+import { GallerySection } from '@/components/gallery-section'
 
 const usps = [
   {
@@ -164,6 +165,7 @@ export default function Page() {
       <ServicesSection />
       <ComparisonSection />
       <ReviewsSection />
+      <GallerySection />
       <SystemSection />
       <FinancingSection />
       <GuaranteeSection />
