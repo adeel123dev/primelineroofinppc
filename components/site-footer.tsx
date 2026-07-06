@@ -100,10 +100,10 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li>
                 <a
-                  href="tel:+61242177737"
+                  href="tel:+61485011447"
                   className="inline-flex items-center gap-2 font-semibold text-foreground hover:text-accent"
                 >
-                  <Phone className="h-4 w-4 text-accent" aria-hidden="true" /> (02) 4217 7737
+                  <Phone className="h-4 w-4 text-accent" aria-hidden="true" /> 0485 011 447
                 </a>
               </li>
               <li>
@@ -205,18 +205,29 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} Primeline Roofing. Licensed &amp; Fully Insured (NSW Fair
-            Trading). All rights reserved.
+        <div className="mt-6 border-t border-border pt-6">
+          <p className="text-xs text-muted-foreground">
+            Website designed and developed by
+            <a href="https://digitalgrace.com.au" target="_blank" rel="noopener noreferrer" className="ml-1 font-medium text-accent hover:underline">
+              Digital Grace Marketing
+            </a>
           </p>
-          <div className="flex items-center gap-4">
-            <a href="#top" className="hover:text-accent">
-              Privacy Policy
-            </a>
-            <a href="#top" className="hover:text-accent">
-              Sitemap
-            </a>
+          <div className="mt-4 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Primeline Roofing. Licensed &amp; Fully Insured (NSW Fair
+              Trading). All rights reserved.
+            </p>
+            <div className="flex items-center gap-4 text-xs">
+              <a href="#top" className="text-muted-foreground hover:text-accent">
+                Privacy Policy
+              </a>
+              <a href="#top" className="text-muted-foreground hover:text-accent">
+                Terms of Service
+              </a>
+              <a href="#top" className="text-muted-foreground hover:text-accent">
+                Sitemap
+              </a>
+            </div>
           </div>
         </div>
       </div>
