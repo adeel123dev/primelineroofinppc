@@ -1,25 +1,25 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Wrench, Home, Layers, CloudRain } from 'lucide-react'
 
 const services = [
   {
-    icon: 'M8 3l2 4h3l-2.5 2 1 3-2.5-2-2.5 2 1-3L3 7h3l2-4z',
-    title: 'ROOFING',
-    description: 'Only the best quality roofing materials are sourced for every job',
-  },
-  {
-    icon: 'M3 8l1-1h2l-1 1v3l1 1H3l1-1V8zm6 0l1-1h2l-1 1v3l1 1H9l1-1V8z',
+    icon: Wrench,
     title: 'ROOF REPAIRS',
-    description: 'Replacement roof tiles through to leaking roofs',
+    description: 'From minor leaks to damaged sheets, flashing and loose fixings — repairs that stop water entry',
   },
   {
-    icon: 'M2 4h10v8H2z',
-    title: 'FLAT ROOFING',
-    description: 'Quality flat roofing in felt, GRP or EPDM',
+    icon: Home,
+    title: 'ROOF REPLACEMENT',
+    description: 'Full re-roofing and roof replacement, including tile-to-metal conversions',
   },
   {
-    icon: 'M2 6h10v2H2z',
-    title: 'FASCIAS, SOFFITS & GUTTERING',
-    description: 'Roofline products installed or repaired',
+    icon: Layers,
+    title: 'METAL & COLORBOND ROOFING',
+    description: 'BlueScope-grade metal and Colorbond roofing built to last in Australian conditions',
+  },
+  {
+    icon: CloudRain,
+    title: 'STORM DAMAGE & LEAK REPAIRS',
+    description: 'Storm damage inspections, make-safe and leak repairs with insurance reports',
   },
 ]
 
@@ -56,18 +56,11 @@ export function ServicesSection() {
                 }}
               >
                 {/* Icon */}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-12 w-12 text-foreground mb-4"
+                <service.icon
+                  className="mb-4 h-12 w-12 text-foreground"
+                  strokeWidth={1.5}
                   aria-hidden="true"
-                >
-                  <path d={service.icon} />
-                </svg>
+                />
 
                 {/* Title */}
                 <h3 className="font-heading text-base font-bold text-foreground">
